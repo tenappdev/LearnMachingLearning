@@ -12,14 +12,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #สร้างตัวเลข -5 ถึง 5 จำนวน 100 ชุด
-x = np.linspace(-5,5,100) #ตัวแปรอิสระ
-print(x)
+x = np.linspace(-5,5,100) #ตัวแปรอิสระ ที่นำมาวาดเส้น
+print(x) #เมื่อ print ออกมาจะได้ x มาเป็นขโยง
 
 #y = ax + b
-y = 2*x + 1
+y = 2*x + 1 #เมื่อเอา x ที่เป้นขโยงมาเข้าสมการนี้จะได้ y เป็นขโยงที่จำนวนสมาชิกเท่ากับ x
 
 plt.plot(x,y,'-r',label='y=2x+1')
 plt.xlabel('x')
 plt.ylabel('y')
+plt.legend(loc='upper left')
+plt.title("Graph y=2x+1")
 plt.grid()
 plt.show()
